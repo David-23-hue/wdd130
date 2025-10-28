@@ -1,14 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temple Image</title>
+    <style>
+        /* Make the page content a readable width and center it */
+        body {
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            line-height: 1.5;
+            max-width: 720px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            color: #222;
+        }
+
+        /* Ensure images never overflow the text block and remain proportional */
+        img {
+            display: block;
+            /* put image on its own line like the paragraph */
+            max-width: 100%;
+            /* never wider than the text container */
+            height: auto;
+            /* maintain aspect ratio */
+            margin: 0.75rem 0;
+            /* small spacing to match text rhythm */
+        }
+    </style>
 </head>
+
 <body>
     <h1>The Temple</h1>
     <p>This is an image of the beautiful temple in Accra, Ghana:</p>
     <img src="images/temple-large.jpeg" alt="The Accra Ghana Temple">
-    
+
 </body>
+
 </html>
