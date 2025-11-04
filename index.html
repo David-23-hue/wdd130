@@ -44,15 +44,37 @@
             font-size: 0.9rem;
             color: #555;
         }
+
+        /* Skip link: visually hidden until focused */
+        .skip-link {
+            position: absolute;
+            left: -999px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+
+        .skip-link:focus {
+            left: 1rem;
+            top: 1rem;
+            width: auto;
+            height: auto;
+            background: #0b6cff;
+            color: #fff;
+            padding: 0.5rem 0.75rem;
+            border-radius: 4px;
+            text-decoration: none;
+            z-index: 1000;
+        }
     </style>
 </head>
 
 <body>
     <!-- skip link for keyboard users -->
-    <a class="skip-link" href="#main-content"
-        style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to content</a>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <header>
-        <nav>
+        <nav aria-label="Primary navigation">
             <a href="index.html">Home</a>
             <a href="rafting.html">Rafting Website</a>
         </nav>
@@ -60,8 +82,8 @@
 
     <main>
         <h1 id="main-content">David Opare Addo Mensah | WDD 130</h1>
-        <!-- profile.jpg wasn't present — use a local image as a placeholder; replace with your real photo when available -->
-        <img src="images/aba-nigeria-temple.jpeg" alt="Profile placeholder (replace with your photo)" class="avatar" />
+        <!-- Use the SVG profile placeholder (replace with your real photo if you have one) -->
+        <img src="images/profile.svg" alt="Profile photo of David Opare Addo Mensah" class="avatar" />
         <p>I am a student at BYU-Idaho studying Web Development. I enjoy hiking, coding, and learning new things!</p>
 
         <!-- Add a responsive content image that fits the text column -->
@@ -69,6 +91,25 @@
             <img src="images/temple-large.jpeg" alt="Accra Ghana Temple" class="content-image" />
             <figcaption>Accra Ghana Temple — example image added for layout and file-path demonstration.</figcaption>
         </figure>
+
+        <!-- Photo gallery using project images folder -->
+        <section aria-labelledby="gallery-heading">
+            <h2 id="gallery-heading">Photo Gallery</h2>
+            <div class="gallery">
+                <figure>
+                    <img src="images/aba-nigeria-temple.jpeg" alt="Aba Nigeria Temple" class="content-image" />
+                    <figcaption>Aba Nigeria Temple</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/temple-large.jpeg" alt="Accra Ghana Temple" class="content-image" />
+                    <figcaption>Accra Ghana Temple</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/salt-lake-temple.jpg" alt="Salt Lake Temple" class="content-image" />
+                    <figcaption>Salt Lake Temple</figcaption>
+                </figure>
+            </div>
+        </section>
     </main>
 
     <footer>
