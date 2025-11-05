@@ -1,0 +1,42 @@
+/* styles.css */
+
+/* Main content width limitation */
+main {
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+/* Aside styling */
+aside {
+    width: 300px;
+    margin: 1em;
+    border: 1px solid #ccc;
+    padding: 1em;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Aside image sizing */
+aside img {
+    width: 200px;
+    height: auto;
+}
+
+/* Main image specific styling */
+main img {
+    width: 150px;
+    height: auto;
+}
+
+/* Reset paragraph padding */
+p {
+    padding: 0;
+}
+
+/* Footer styling */
+footer {
+    margin-top: 1em;
+    border-top: 1px solid #ccc;
+    text-align: center;
+    padding: 1em;
+}
