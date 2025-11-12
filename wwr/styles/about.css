@@ -1,0 +1,21 @@
+/* Basic reset */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;line-height:1.5;color:#17324b}
+header{display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:#f3fbff;border-bottom:4px solid #cce7ff}
+.logo{height:56px}
+nav a{margin-left:1rem;color:#0b577a;text-decoration:none;font-weight:600}
+.hero{height:320px;background-image:url('../images/hero-wave.svg');background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;color:white;text-shadow:0 2px 6px rgba(0,0,0,.5)}
+.hero h1{font-size:2.25rem;background:rgba(0,0,0,0.25);padding:.25rem .6rem;border-radius:6px}
+main{padding:2rem}
+.intro{display:flex;gap:1rem;align-items:flex-start;margin-bottom:1.5rem}
+.client{width:140px;height:auto;border-radius:8px}
+.history,h2{margin-bottom:.5rem}
+.history p{max-width:60ch}
+.adventures{margin-top:1.25rem}
+footer{display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:#f3fbff;border-top:1px solid #e1f0fb;margin-top:2rem}
+.socialmedia a{margin-left:.5rem;display:inline-block}
+.socialmedia img{width:28px;height:28px}
+@media (max-width:700px){
+  .intro{flex-direction:column;align-items:center}
+  header{flex-direction:column;gap:.5rem}
+}

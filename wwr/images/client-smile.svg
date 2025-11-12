@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" viewBox="0 0 300 200">
+  <rect width="300" height="200" rx="12" fill="#fff" stroke="#e6f6ff"/>
+  <circle cx="80" cy="80" r="28" fill="#ffd89b"/>
+  <circle cx="220" cy="80" r="28" fill="#ffd89b"/>
+  <path d="M70 140 Q150 180 230 140" stroke="#17324b" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <text x="150" y="34" font-size="20" text-anchor="middle" fill="#0b577a">Happy Client</text>
+</svg>
