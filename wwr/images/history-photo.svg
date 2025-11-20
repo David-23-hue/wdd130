@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="320" viewBox="0 0 480 320">
+  <rect width="480" height="320" fill="#f6fbff"/>
+  <g fill="#0b577a">
+    <circle cx="80" cy="110" r="28"/>
+    <circle cx="140" cy="110" r="28"/>
+    <rect x="60" y="160" width="160" height="28" rx="6"/>
+  </g>
+  <text x="50%" y="260" text-anchor="middle" font-size="16" fill="#0b577a">Our early guides</text>
+</svg>
