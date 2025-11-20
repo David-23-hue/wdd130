@@ -1,0 +1,47 @@
+:root{
+  --body-font: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  --heading-font: Georgia, 'Times New Roman', serif;
+  --primary-color: #0b577a;
+  --accent1-color: #1aa2d6;
+  --accent2-color: #cce7ff;
+}
+
+/* Reset box model */
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{font-family:var(--body-font);color:var(--primary-color);line-height:1.5;background:#fff}
+
+/* Center page content and limit width */
+header, main, footer{width:840px;margin:0 auto}
+
+/* Headings */
+h1,h2{font-family:var(--heading-font);color:var(--primary-color)}
+
+/* Basic spacing for common elements */
+nav, p, section, article{margin:16px;padding:8px}
+
+/* Nav styling */
+header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+header .branding .logo{height:52px}
+nav a{margin-left:12px;color:var(--primary-color);text-decoration:none;font-weight:600}
+
+/* Hero area */
+.hero{position:relative;height:360px;background-image:url('../images/hero-wave.svg');background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center}
+.hero h1{position:absolute;top:20px;width:100%;padding:16px;text-align:center;opacity:0.9;background-color:var(--accent1-color);color:#fff;border-radius:6px}
+.hero img{display:block;width:100%;height:auto}
+
+/* Article intro */
+.intro{display:block;overflow:auto;margin:16px}
+.intro .client{float:right;width:125px;margin-left:12px;border-radius:8px}
+
+/* Social media links in footer */
+footer{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-top:1px solid #e6f6ff;margin-top:24px}
+.socialmedia a{text-decoration:none}
+.socialmedia img{width:28px;height:28px}
+
+/* Responsive tweaks */
+@media (max-width:760px){
+  header, main, footer{width:auto;padding:0 16px}
+  .intro .client{float:none;display:block;margin:0 auto 12px}
+  .hero{height:240px}
+}
