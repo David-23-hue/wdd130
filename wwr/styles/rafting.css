@@ -4,6 +4,8 @@
   --primary-color: #0b577a;
   --accent1-color: #1aa2d6;
   --accent2-color: #cce7ff;
+  --white: #ffffff;
+  --muted-border: #e6f6ff;
 }
 
 /* Reset box model */
@@ -11,9 +13,10 @@
 
 /* Skip link - visually hidden until focused */
 .skip-link{position:absolute;left:-999rem;top:auto;width:1px;height:1px;overflow:hidden}
-.skip-link:focus{left:16px;top:16px;width:auto;height:auto;padding:8px 12px;background:#fff;border:2px solid var(--primary-color);border-radius:6px;z-index:999}
 
-body{font-family:var(--body-font);color:var(--primary-color);line-height:1.5;background:#fff}
+.skip-link:focus{left:16px;top:16px;width:auto;height:auto;padding:8px 12px;background:var(--white);border:2px solid var(--primary-color);border-radius:6px;z-index:999}
+
+body{font-family:var(--body-font);color:var(--primary-color);line-height:1.5;background:var(--white)}
 
 /* Center page content and limit width */
 header, main, footer{width:840px;margin:0 auto}
@@ -37,18 +40,17 @@ header .branding .logo{height:52px}
 /* Hero area */
 .hero{position:relative;height:360px;display:flex;align-items:center;justify-content:center;overflow:hidden}
 .hero .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:1}
-.hero h1{position:absolute;top:20px;width:100%;padding:16px;text-align:center;background-color:var(--primary-color);color:#fff;border-radius:6px;z-index:6}
 
-/* Hero article overlay */
-.hero { position: relative; }
-/* audit-friendly selectors: ensure .hero article and its img are explicitly targeted */
+.hero h1{position:absolute;top:20px;width:100%;padding:16px;text-align:center;background-color:var(--primary-color);color:var(--white);border-radius:6px;z-index:6}
+
 .hero article { position: absolute; right:16px; bottom:16px; width:320px; background: rgba(255,255,255,0.95); padding:12px; border-radius:6px; z-index:7 }
 .hero article img { float: right; width:125px; margin-left:12px; border-radius:8px }
 .hero .hero-intro p{margin:0}
 
 /* Article intro */
 .intro{display:block;overflow:auto;margin:16px}
-.intro .client{float:right;width:125px;margin-left:12px;border-radius:8px}
+
+.intro .client{float:right;width:125px;margin-left:12px;border-radius:8px;background:var(--accent1-color)}
 
 /* History section layout */
 .history-grid{display:grid;grid-template-columns:1fr 320px;gap:16px;align-items:start}
@@ -60,14 +62,16 @@ header .branding .logo{height:52px}
 .adventure-grid img{display:block;width:100%;height:120px;object-fit:cover}
 .adventure-grid figcaption{font-size:0.95rem;padding-top:8px;color:var(--primary-color);margin-top:auto}
 
-/* Social media links in footer */
-footer{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-top:1px solid #e6f6ff;margin-top:24px}
+/* footer element styling (ensures element selector applies) */
+footer{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-top:1px solid var(--muted-border);margin-top:24px}
+
+.footer{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-top:1px solid var(--muted-border);margin-top:24px}
 .socialmedia{display:flex;gap:10px;align-items:center;justify-content:flex-end}
 .socialmedia a{text-decoration:none;display:inline-block}
 .socialmedia img{width:28px;height:28px;display:block}
 
 /* use the accent1 color to style small UI elements so variables are used */
-.intro .client{background:var(--accent1-color)}
+/* accent color used for small UI elements */
 
 /* Contact page styles */
 .contact-info{display:grid;grid-template-columns:1fr 360px;gap:16px;align-items:start}
@@ -78,18 +82,15 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:12p
 .team-grid img{width:100%;height:auto;border-radius:8px}
 .contact-form form{max-width:720px;margin:0}
 .contact-form label{display:block;margin:8px 0 4px}
-.contact-form input[type="text"],.contact-form input[type="email"],.contact-form textarea{width:100%;padding:8px;border:1px solid #cce7ff;border-radius:6px}
-.contact-form fieldset{border:1px solid #e6f6ff;padding:8px;border-radius:6px;margin:8px 0}
+.contact-form input[type="text"],.contact-form input[type="email"],.contact-form textarea{width:100%;padding:8px;border:1px solid var(--accent2-color);border-radius:6px}
+.contact-form fieldset{border:1px solid var(--muted-border);padding:8px;border-radius:6px;margin:8px 0}
 .checkbox{display:block;margin:8px 0}
-.btn-submit{background:var(--primary-color);color:#fff;padding:10px 16px;border-radius:6px;border:none;font-weight:700}
+.btn-submit{background:var(--primary-color);color:var(--white);padding:10px 16px;border-radius:6px;border:none;font-weight:700}
 
+/* Responsive tweaks (merged) */
 @media (max-width:760px){
   .contact-info{grid-template-columns:1fr}
   .team-grid{grid-template-columns:repeat(2,1fr)}
-}
-
-/* Responsive tweaks */
-@media (max-width:760px){
   header, main, footer{width:auto;padding:0 16px}
   .intro .client{float:none;display:block;margin:0 auto 12px}
   .hero{height:240px}
