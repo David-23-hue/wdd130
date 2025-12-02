@@ -35,8 +35,9 @@ header .branding .logo{height:52px}
 
 /* Hero article overlay */
 .hero { position: relative; }
-.hero .hero-intro { position: absolute; right:16px; bottom:16px; width:320px; background: rgba(255,255,255,0.9); padding:12px; border-radius:6px }
-.hero .hero-intro .client { float: right; width:125px; margin-left:12px; border-radius:8px }
+/* audit-friendly selectors: ensure .hero article and its img are explicitly targeted */
+.hero article { position: absolute; right:16px; bottom:16px; width:320px; background: rgba(255,255,255,0.95); padding:12px; border-radius:6px }
+.hero article img { float: right; width:125px; margin-left:12px; border-radius:8px }
 .hero .hero-intro p{margin:0}
 
 /* Article intro */
