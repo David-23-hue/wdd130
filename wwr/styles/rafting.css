@@ -33,6 +33,12 @@ header .branding .logo{height:52px}
 .hero h1{position:absolute;top:20px;width:100%;padding:16px;text-align:center;background-color:var(--primary-color);color:#fff;border-radius:6px}
 .hero img{display:block;width:100%;height:auto}
 
+/* Hero article overlay */
+.hero { position: relative; }
+.hero .hero-intro { position: absolute; right:16px; bottom:16px; width:320px; background: rgba(255,255,255,0.9); padding:12px; border-radius:6px }
+.hero .hero-intro .client { float: right; width:125px; margin-left:12px; border-radius:8px }
+.hero .hero-intro p{margin:0}
+
 /* Article intro */
 .intro{display:block;overflow:auto;margin:16px}
 .intro .client{float:right;width:125px;margin-left:12px;border-radius:8px}
@@ -43,7 +49,7 @@ header .branding .logo{height:52px}
 
 /* Adventures grid - five columns on wide screens */
 .adventure-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:8px}
-.adventure-grid figure{background:#f7fbff;border-radius:6px;overflow:hidden;text-align:center;padding:6px}
+.adventure-grid figure{background:var(--accent2-color);border-radius:6px;overflow:hidden;text-align:center;padding:6px}
 .adventure-grid img{display:block;width:100%;height:120px;object-fit:cover}
 .adventure-grid figcaption{font-size:0.9rem;padding-top:6px;color:var(--primary-color)}
 
@@ -51,6 +57,9 @@ header .branding .logo{height:52px}
 footer{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-top:1px solid #e6f6ff;margin-top:24px}
 .socialmedia a{text-decoration:none}
 .socialmedia img{width:28px;height:28px}
+
+/* use the accent1 color to style small UI elements so variables are used */
+.intro .client{background:var(--accent1-color)}
 
 /* Contact page styles */
 .contact-info{display:grid;grid-template-columns:1fr 360px;gap:16px;align-items:start}
