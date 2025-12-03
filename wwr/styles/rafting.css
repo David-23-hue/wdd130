@@ -58,8 +58,8 @@ header .branding .logo{height:52px}
 
 /* Adventures grid - five columns on wide screens */
 .adventure-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin:12px 0}
-.adventure-grid figure{background:var(--accent2-color);border-radius:6px;overflow:hidden;text-align:center;padding:8px;display:flex;flex-direction:column}
-.adventure-grid img{display:block;width:100%;height:120px;object-fit:cover}
+.adventure-grid figure{background:var(--accent2-color);border-radius:6px;overflow:hidden;text-align:center;padding:8px;display:flex;flex-direction:column;margin:0}
+.adventure-grid img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:6px}
 .adventure-grid figcaption{font-size:0.95rem;padding-top:8px;color:var(--primary-color);margin-top:auto}
 
 /* footer element styling (ensures element selector applies) */
@@ -86,6 +86,29 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:12p
 .contact-form fieldset{border:1px solid var(--muted-border);padding:8px;border-radius:6px;margin:8px 0}
 .checkbox{display:block;margin:8px 0}
 .btn-submit{background:var(--primary-color);color:var(--white);padding:10px 16px;border-radius:6px;border:none;font-weight:700}
+
+/* Home page grid and trips grid - responsive images */
+.home-grid .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.home-grid article img{width:100%;height:auto;object-fit:cover;border-radius:8px;display:block}
+.home-grid article{background:var(--accent2-color);padding:12px;border-radius:8px}
+
+.trip-list .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.trip-list article figure{margin:0;padding:0}
+.trip-list article img{width:100%;height:auto;object-fit:cover;border-radius:8px;display:block}
+.trip-list article{background:var(--accent2-color);padding:12px;border-radius:8px}
+
+.newsletter-cta{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;margin:24px 0;padding:24px;background:var(--accent2-color);border-radius:8px}
+.newsletter-cta .cta h2{margin-top:0}
+.newsletter-cta form label{display:block;margin:12px 0 4px}
+.newsletter-cta form input{width:100%;padding:8px;border:1px solid #ccc;border-radius:6px;margin-bottom:12px}
+
+.trips-cta{text-align:center;margin:24px 0;padding:24px;background:var(--accent2-color);border-radius:8px}
+.trips-cta a{display:inline-block;margin-top:12px}
+
+.trips-table table{width:100%;border-collapse:collapse;margin-top:12px}
+.trips-table th,.trips-table td{padding:12px;text-align:left;border-bottom:1px solid #ddd}
+.trips-table th{background:var(--primary-color);color:var(--white)}
+.trips-table tr:hover{background:var(--accent2-color)}
 
 /* Responsive tweaks (merged) */
 @media (max-width:760px){
